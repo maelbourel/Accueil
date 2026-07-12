@@ -8,7 +8,7 @@ A se renseigner
 
 Avoir un adresse IP fixe 
 
-[Procédure sur Débian](/06-projet/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)
+[Procédure sur Débian](/06-procédure/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)
 
 
 ## Installation  
@@ -185,4 +185,4 @@ GPL ATTACK_RESPONSE id check returned root [**] [Classification: Potentially Bad
 
 ## Bonus
 
-[Procédure lier un agent Wazuh pour Suricata](/06-projet/Wazuh/Procédure%20lier%20un%20agent%20Wazuh%20pour%20Suricata.md)
+[Procédure lier un agent Wazuh pour Suricata](/06-procédure/Wazuh/Procédure%20lier%20un%20agent%20Wazuh%20pour%20Suricata.md)

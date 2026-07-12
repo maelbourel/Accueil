@@ -8,11 +8,11 @@ A se renseigner
 
 Avoir un adresse IP fixe 
 
-[Procédure sur Débian](/06-projet/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)
+[Procédure sur Débian](/06-procédure/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)
 
 Avoir Docker Compose d'installer 
 
-[Procédure d'installation de Docker](/06-projet/Procédure%20Utile/Procédure%20Installation%20Docker.md)
+[Procédure d'installation de Docker](/06-procédure/Procédure%20Utile/Procédure%20Installation%20Docker.md)
 
 
 ## Installation  

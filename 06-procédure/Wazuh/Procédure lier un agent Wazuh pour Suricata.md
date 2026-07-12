@@ -4,11 +4,11 @@
 
 Avoir Suricata
 
-[Procédure installation de Suricata](/06-projet/Suricata%20/Procédure%20installation%20de%20Suricata.md)
+[Procédure installation de Suricata](/06-procédure/Suricata%20/Procédure%20installation%20de%20Suricata.md)
 
 Avoir Wazuh
 
-[Procédure installation de Wazuh](/06-projet/Wazuh/Procédure%20installation%20de%20Wazuh.md)  
+[Procédure installation de Wazuh](/06-procédure/Wazuh/Procédure%20installation%20de%20Wazuh.md)  
 
 Ouvrir les port suivant :  
 

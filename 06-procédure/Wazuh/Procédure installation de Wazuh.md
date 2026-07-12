@@ -8,7 +8,7 @@ A se renseigner
 
 Avoir un adresse IP fixe 
 
-[Procédure sur Débian](/06-projet/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)  
+[Procédure sur Débian](/06-procédure/Procédure%20Utile/Procédure%20config%20réseau%20Débian.md)  
 
 Ouvrir les port suivant :  
 
@@ -74,10 +74,10 @@ https://<IP_SERVEUR>
 
 ## Installez des agents
 
-[Procédure lier un agent Wazuh pour Suricata](/06-projet/Wazuh/Procédure%20lier%20un%20agent%20Wazuh%20pour%20Suricata.md)  
-[Procédure installation d'agent Wazuh sur Linux](/06-projet/Wazuh/Procédure%20installation%20d'agent%20Wazuh%20sur%20Linux.md)  
-[Procédure installation d'agent Wazuh sur Windows](/06-projet/Wazuh/Procédure%20installation%20d'agent%20Wazuh%20sur%20Windows.md)  
-[Procédure installation d'agent depuis Wazuh Manager](/06-projet/Wazuh/Procédure%20installation%20d'agent%20depuis%20Wazuh%20Manager.md)  
+[Procédure lier un agent Wazuh pour Suricata](/06-procédure/Wazuh/Procédure%20lier%20un%20agent%20Wazuh%20pour%20Suricata.md)  
+[Procédure installation d'agent Wazuh sur Linux](/06-procédure/Wazuh/Procédure%20installation%20d'agent%20Wazuh%20sur%20Linux.md)  
+[Procédure installation d'agent Wazuh sur Windows](/06-procédure/Wazuh/Procédure%20installation%20d'agent%20Wazuh%20sur%20Windows.md)  
+[Procédure installation d'agent depuis Wazuh Manager](/06-procédure/Wazuh/Procédure%20installation%20d'agent%20depuis%20Wazuh%20Manager.md)  
 
 
 
