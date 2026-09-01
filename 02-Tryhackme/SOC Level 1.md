@@ -8,4 +8,11 @@ Sommaire
 
 📚 Notion :
 
-- 
+### SOC Role in Blue Team
+
+📚 Notion :
+
+### Humans as Attack Vectors
+
+📚 Notion :
+
