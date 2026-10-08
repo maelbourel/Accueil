@@ -64,11 +64,62 @@ sort data.txt | uniq -u
 ```
 
 sort trie les lignes
-uniq -u affiche seulement les lgnes qui apparaissent une seule fois
+uniq -u affiche seulement les lignes qui apparaissent une seule fois
 
 ## Bandit 9 
 
-> mdp : EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
+> mdp : EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl  
+
+Utilisation de la commande `strings` et `grep`
+
+```bash
+strings data.txt | grep ===
+```
+
+`strings` sert à extraire d'un fichier les suites de caractères lisible
+
+## Bandit 10
+
+> mdp : B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+Utilisation de la commande `base64`  :
+
+```bash
+cat data.txt | base64 -d
+```
+
+`base64` sert à encoder ou décoder des données en Base64. ( -d pour décoder )
+
+
+## Bandit 11 
+
+> mdp : pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+
+Utilisation de la commande `tr` :
+
+```bash
+cat data.txt | tr 'A-Z' 'N-ZA-M'| tr 'a-z' 'n-za-m'
+```
+
+`tr` sert à remplacer, supprimer ou transformer des caractères dans un texte, caractère par caractère.
+
+
+## Bandit 12
+
+> mdp : GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+
+Utilisation des commandes `file` , `tar` , `gzip` , `bzip2` et `xxd`  :
+
+| Commande | Utilité                                          | Commande pour décompresser   |
+| -------- | ------------------------------------------------ | ---------------------------- |
+| `file`   | Identifie le type d'un fichier.                  | —                            |
+| `tar`    | Archive plusieurs fichiers dans un seul fichier. | `tar -xf fichier.tar`        |
+| `gzip`   | Compresse un fichier au format `.gz`.            | `gunzip fichier.gz`          |
+| `bzip2`  | Compresse un fichier au format `.bz2`.           | `bunzip2 fichier.bz2`        |
+| `xxd`    | Convertit un fichier en hexdump et inversement.  | `xxd -r fichier.hex fichier` |
 
 
 
+## Bandit 13 
+
+> mdp : qQYQiHOBPR8zR61qxYqX45quvihF2uzk
