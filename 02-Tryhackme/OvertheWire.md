@@ -123,3 +123,168 @@ Utilisation des commandes `file` , `tar` , `gzip` , `bzip2` et `xxd`  :
 ## Bandit 13 
 
 > mdp : qQYQiHOBPR8zR61qxYqX45quvihF2uzk
+
+Utilisation des commandes `scp` et `ssh` :  
+
+```bash 
+scp -P 2220 bandit13@bandit.labs.overthewire.org:/home/bandit13/sshkey.private /home/mael/Documents/ # On copie la clé ssh
+ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org # On se connecte grace a la clé copié 
+```
+
+`scp` : permet de copier un fichier entre deux machines via SSH  
+`ssh -i` : permet de se connecter à un serveur SSH en utilisant une clé privée spécifiée, plutôt qu’un mot de passe.
+
+## Bandit 14 
+
+> mdp : aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+
+Utilisation de la commande `nc` : 
+
+```bash
+nc locahost 30000
+# puis entrer le mdp
+```
+`nc` (Netcat) permet d’établir une connexion réseau à un hôte et un port pour envoyer ou recevoir des données
+
+
+## Bandit 15 
+
+> mdp : pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+
+Utilisation de la commande `ncat` : 
+
+```bash 
+ncat --ssl localhost 30001
+```
+
+`ncat -ssl` permet d’établir une connexion réseau chiffrée avec TLS entre un client et un serveur compatible, afin de protéger les données échangées contre leur lecture en clair pendant le transit.
+
+## Bandit 16 
+
+> mdp : kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+Utilisation de la commande `nmap` et `ncat` :
+
+```bash 
+nmap -p 31000-32000 localhost # on peut rajouter --script ssl-cert
+ncat --ssl localhost 31790 # on tape le mdp de passe et on copie la clé ssh
+```
+
+## Bandit 17 
+
+> mdp : la clé ssh récuperer avant
+
+Utilisation de la commande `diff` : 
+
+```bash 
+diff passwords.old passwords.new
+```
+
+`diff` compare deux fichiers ligne par ligne et affiche les différences entre eux
+
+
+## Bandit 18 
+
+> mdp : OQxXZjELndr90zuhOTDYBEomI0SZITXI
+
+Utilisation de `ssh -t` : 
+
+```bash
+ssh bandit18@bandit.labs.overthewire.org -p 2220 -t cat readme
+```
+
+`ssh -t` force l’allocation d’un terminal interactif sur la machine distante, ce qui permet d’exécuter des commandes nécessitant un terminal, notamment lorsque la configuration SSH ne fournit pas de shell interactif par défaut
+
+## Bandit 19 
+
+> mdp : KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
+
+Utilisation d'un programme `./` pour avoir les privilège nécessaire : 
+
+```bash
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+
+## Bandit 20 
+
+> mdp : 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+
+Utilisation de deux terminal : 
+
+Un premier qui se met en mode écoute : 
+
+ ```bash
+ nc -l -p 1234
+ ```
+Un deuxième qui lance le programme : 
+
+```bash
+./suconnect 1234
+```
+
+Après le premier peux envoyer le mdp pour comparaison et recevoir le nouveaux mdp 
+
+
+## Bandit 21 
+
+> mdp : bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY
+
+Exploration de la base cron :
+
+```bash
+ls -l /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```
+
+## Bandit 22 
+
+> mdp : RYVux2rHEm9tiXHmLFzuR7Vhx6AZQMEz 
+
+Il faut comprendre le script : 
+
+```bash
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+```
+
+et donc trouver le fichier temporaire avec le mdp : 
+
+```bash
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+```
+
+
+## Bandit 23 
+
+> mdp : gKXDTAXnIz3OBxiPjRZ2uqutUlPZrBsw
+
+On comprend en regardant le cron que toutes les minutes on peut exécuter un script dans un certain dossier avec les bonne autorisation alors on crée un script pour récupérer le mdp dans un nouveau dossier 
+
+```bash
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/mdpbandit24
+```
+
+Penser a rendre le script executable `chmod +x script.sh`
+
+
+## Bandit 24 
+
+> mdp : hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv
+
+creation d'un script [ici](/05-scripts/bash/Bandit_Bruteforce.sh)
+
+## Bandit 25
+
+> mdp : SoHfqMOEqIX2IYKVciZxvgpR9a2Djx4P
+
