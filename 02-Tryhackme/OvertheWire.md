@@ -288,3 +288,59 @@ creation d'un script [ici](/05-scripts/bash/Bandit_Bruteforce.sh)
 
 > mdp : SoHfqMOEqIX2IYKVciZxvgpR9a2Djx4P
 
+## Bandit 26 
+
+> mdp : jHdv2ELQhT22BkprMNDjybZDAkw1zeBJ
+
+## Bandit 27 
+
+> mdp : STJLJBRRphMxKB392CT4iOr5CbzPU9ER
+
+Utilisation de `git` : 
+
+```bash
+git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+```
+
+
+## Bandit 28
+
+> mdp : y8Yd2ssKcpHpud7UvOSOxwamRMzIGIeQ
+
+Utilisation de `git` : 
+
+```bash
+git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo
+cd repo 
+git log -p
+```
+
+## Bandit 29 
+
+> mdp : Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
+
+Utilisation de `git` : 
+
+```bash 
+git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo
+git branch -a
+git switch dev
+```
+
+## Bandit 30 
+
+> mdp : jq9Dfg2rXsfYsWMgFuKlXhphjdH7USgX
+
+Utilisation de `git` : 
+
+```bash 
+git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
+git tag 
+git show secret
+```
+
+## Bandit 31 
+
+> mdp : 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
+
+
